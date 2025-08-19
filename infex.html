@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprender Fracciones - Interfaz Mejorada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Representa la Fracción</h1>
+        <p class="instructions">Haz clic en la figura para seleccionar las porciones correctas.</p>
+
+        <div class="fraction-display">
+            <span>Fracción a seleccionar:</span>
+            <div class="fraction-container">
+                <span class="numerator" id="numerator"></span>
+                <span class="denominator" id="denominator"></span>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="fractionCanvas"></canvas>
+        </div>
+        
+        <button id="verifyBtn">Verificar</button>
+
+        <div id="result"></div>
+
+        <div id="scoreboard">
+            <div class="score-item">Aciertos<span id="correctCountEl">0</span></div>
+            <div class="score-item">Fallos<span id="incorrectCountEl">0</span></div>
+            <div class="score-item">Efectividad<span id="percentageEl">0%</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>    
+       
+   
+
+</body>
+</html>

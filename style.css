@@ -1,0 +1,120 @@
+ :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --background-color: #eef2f7;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--dark-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .game-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        p.instructions {
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+        }
+
+        .fraction-display {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .fraction-container {
+            font-weight: 700;
+            font-size: 1.5em;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .numerator { display: block; padding: 0.1em 0.4em; border-bottom: 3px solid var(--primary-color); }
+        .denominator { display: block; padding: 0.1em 0.4em; }
+
+        .canvas-container { 
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        canvas {
+            cursor: pointer;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+        }
+        
+        #verifyBtn {
+            background-color: var(--success-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 10px;
+        }
+        #verifyBtn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            min-height: 25px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        #result.visible { opacity: 1; transform: scale(1); }
+        #result.correct { background-color: #e9f7ef; border: 2px solid var(--success-color); color: var(--success-color); }
+        #result.incorrect { background-color: #fdeeee; border: 2px solid var(--danger-color); color: var(--danger-color); }
+
+        #scoreboard {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-around;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        .score-item span { font-size: 1.2em; display: block; }
+        #correctCountEl { color: var(--success-color); }
+        #incorrectCountEl { color: var(--danger-color); }
+        #percentageEl { color: var(--primary-color); }
